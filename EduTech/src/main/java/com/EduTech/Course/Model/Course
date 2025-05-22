@@ -11,4 +11,3 @@ public class Course {
     private boolean published;
     // Getters y setters
 }
-

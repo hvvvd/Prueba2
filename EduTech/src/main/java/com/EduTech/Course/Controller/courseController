@@ -14,5 +14,3 @@ public class CourseController {
         return ResponseEntity.ok(courseService.getCoursesByInstructor(instructorId));
     }
 }
-
-

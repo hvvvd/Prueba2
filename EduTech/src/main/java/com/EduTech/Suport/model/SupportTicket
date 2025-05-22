@@ -1,0 +1,13 @@
+@Entity
+public class SupportTicket {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private Long userId;
+    private String title;
+    private String description;
+    private String status; // "open", "in_progress", "resolved"
+    private Date createdAt;
+    private Date resolvedAt;
+
+}

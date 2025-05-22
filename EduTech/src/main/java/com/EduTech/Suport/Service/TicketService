@@ -1,0 +1,11 @@
+@Service
+public class TicketService {
+    @Autowired
+    private TicketRepository ticketRepository;
+    
+    public SupportTicket createTicket(SupportTicket ticket) {
+        ticket.setStatus("open");
+        ticket.setCreatedAt(new Date());
+        return ticketRepository.save(ticket);
+    }
+}   

@@ -1,0 +1,12 @@
+@RestController
+@RequestMapping("/api/support")
+public class TicketController {
+    @Autowired
+    private TicketService ticketService;
+    
+    @PostMapping
+    public ResponseEntity<SupportTicket> createTicket(@RequestBody SupportTicket ticket) {
+        return ResponseEntity.ok(ticketService.createTicket(ticket));
+    }
+}
+
