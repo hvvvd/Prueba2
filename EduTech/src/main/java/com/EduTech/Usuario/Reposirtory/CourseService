@@ -1,0 +1,14 @@
+@Service
+public class CourseService {
+    @Autowired
+    private CourseRepository courseRepository;
+    
+    public Course createCourse(Course course) {
+        return courseRepository.save(course);
+    }
+    
+    public List<Course> getCoursesByInstructor(Long instructorId) {
+        return courseRepository.findByInstructorId(instructorId);
+    }
+}
+

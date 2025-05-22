@@ -1,0 +1,14 @@
+@Entity
+public class Course {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String title;
+    private String description;
+    private String category;
+    private Double price;
+    private Long instructorId;
+    private boolean published;
+    // Getters y setters
+}
+
